@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Program2",
+      "name": "Launch Program",
       "program": "${workspaceFolder}/app.js",
       "request": "launch",
       "skipFiles": ["<node_internals>/**"],
@@ -17,16 +17,6 @@
       "request": "attach",
       "skipFiles": ["<node_internals>/**"],
       "type": "pwa-node"
-    },
-
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/app.js",
-      "restart": true,
-      "runtimeExecutable": "nodemon",
-      "console": "integratedTerminal"
     }
   ]
 }
