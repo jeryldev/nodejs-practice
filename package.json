@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "start-server": "node app.js",
-    "build:css": "npx tailwindcss build css/tailwind.css -o css/style.css"
+    "build:css": "npx tailwindcss build css/tailwind.css -o public/style.css"
   },
-  "author": "Maximilian Schwarzmüller",
+  "author": "Jeryl Estopace",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.3"

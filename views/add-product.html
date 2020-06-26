@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <title>Add Product</title>
   </head>
-  <body>
+  <body class="bg-blue-200">
     <header
       id="top"
       class="w-full flex flex-col fixed sm:relative bg-white pin-t pin-r pin-l"
@@ -42,12 +42,11 @@
           <a
             class="text-teal-200 hover:text-white text-lg no-underline sm:px-4 py-2 sm:pt-2"
             href="/"
-            target="_blank"
             >Shop</a
           >
           <a
             class="text-teal-200 hover:text-white text-lg no-underline sm:px-4 py-2 sm:pt-2"
-            href="/add-product"
+            href="/admin/add-product"
             >Add Product</a
           >
         </div>
@@ -56,7 +55,7 @@
     <main class="flex justify-center">
       <div class="w-full max-w-xs">
         <form
-          action="/add-product"
+          action="/admin/add-product"
           method="post"
           class="bg-white text-center shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
@@ -71,6 +70,7 @@
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="title"
               type="text"
+              name="title"
               placeholder="Product Title"
             />
           </div>
