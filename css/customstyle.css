@@ -37,17 +37,17 @@
   position: absolute;
   width: 24px;
   height: 2px;
-  background: #000;
+  background: whitesmoke;
   transform: rotate(0);
   transition: all 0.5s;
 }
 
 .hamburger:hover [class*='-bun'] {
-  background: #333;
+  background: white;
 }
 
 .hamburger__top-bun {
-  transform: translateY(-8px);
+  transform: translateY(-7px);
 }
 
 .hamburger__middle-bun {
@@ -55,7 +55,7 @@
 }
 
 .hamburger__bottom-bun {
-  transform: translateY(8px);
+  transform: translateY(7px);
 }
 
 .open {

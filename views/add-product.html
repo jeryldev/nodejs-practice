@@ -14,13 +14,15 @@
     >
       <nav
         id="site-menu"
-        class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white shadow sm:shadow-none border-t-4 border-red-900"
+        class="flex flex-col sm:flex-row w-full justify-between bg-teal-500 items-center px-4 sm:px-6 bg-white shadow sm:shadow-none"
       >
         <div
           class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center"
         >
           <a href="#" class="no-underline py-1">
-            <h1 class="font-bold text-lg tracking-widest">Node.js Practice</h1>
+            <h1 class="font-semibold text-xl tracking-tight text-white">
+              Node.js Practice
+            </h1>
           </a>
           <button
             id="menuBtn"
@@ -38,20 +40,51 @@
           class="w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden"
         >
           <a
-            class="text-dark font-bold hover:text-red text-lg w-full no-underline sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2"
-            href="https://ttntm.me/blog/tailwind-responsive-menu/"
+            class="text-teal-200 hover:text-white text-lg no-underline sm:px-4 py-2 sm:pt-2"
+            href="/"
             target="_blank"
             >Shop</a
           >
           <a
-            class="text-dark font-bold hover:text-red text-lg w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2"
-            href="#bottom"
+            class="text-teal-200 hover:text-white text-lg no-underline sm:px-4 py-2 sm:pt-2"
+            href="/add-product"
             >Add Product</a
           >
         </div>
       </nav>
     </header>
-
+    <main class="flex justify-center">
+      <div class="w-full max-w-xs">
+        <form
+          action="/add-product"
+          method="post"
+          class="bg-white text-center shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        >
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-lg font-bold mb-2"
+              for="title"
+            >
+              Product Title
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="title"
+              type="text"
+              placeholder="Product Title"
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Add Product
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
     <script>
       function navToggle() {
         var btn = document.getElementById('menuBtn');
