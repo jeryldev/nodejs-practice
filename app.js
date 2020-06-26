@@ -5,14 +5,11 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// app.use(express.static(path.join(__dirname, 'css')));
-// app.use(express.static(__dirname + '../css/style.css'));
-
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
