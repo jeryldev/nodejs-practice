@@ -21,8 +21,8 @@ html(lang='en')
             span.hamburger__middle-bun
             span.hamburger__bottom-bun
         #menu.w-full.sm_w-auto.self-end.sm_self-center.sm_flex.flex-col.sm_flex-row.items-center.py-1.pb-4.sm_py-0.sm_pb-0.hidden
-          a.text-teal-200.hover_text-white.text-lg.no-underline.sm_px-4.py-2.sm_pt-2(href='/') Shop
-          a.text-teal-200.hover_text-white.text-lg.no-underline.sm_px-4.py-2.sm_pt-2(href='/admin/add-product') Add Product
+          a.hover_text-white.text-lg.no-underline.sm_px-4.py-2.sm_pt-2(href='/',class=(path==='/' ? 'text-white' : 'text-teal-200')) Shop
+          a.hover_text-white.text-lg.no-underline.sm_px-4.py-2.sm_pt-2(href='/admin/add-product',class=(path==='/admin/add-product' ? 'text-white' : 'text-teal-200')) Add Product
     block content
             
     script.
