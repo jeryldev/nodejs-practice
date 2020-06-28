@@ -1,49 +1,20 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width,initial-scale=1')
-    link(rel='stylesheet' href='/css/customstyle.css')
-    link(rel='stylesheet' href='/css/style.css')
-    title Add Product
-  body.bg-blue-200
-    header#top.w-full.flex.flex-col.sm_relative.bg-white.pin-t.pin-r.pin-l
-      nav#site-menu.flex.flex-col.sm_flex-row.w-full.justify-between.bg-teal-500.items-center.px-4.sm_px-6.bg-white.shadow.sm_shadow-none
-        .w-full.sm_w-auto.self-start.sm_self-center.flex.flex-row.sm_flex-none.flex-no-wrap.justify-between.items-center
-          a.no-underline.py-1(href='#')
-            h1.font-semibold.text-3xl.tracking-tight.text-white.
-              
-              Node.js Practice
-              
-          button#menuBtn.hamburger.block.sm_hidden.focus_outline-none(type='button' onclick='navToggle();')
-            span.hamburger__top-bun
-            span.hamburger__middle-bun
-            span.hamburger__bottom-bun
-        #menu.w-full.sm_w-auto.self-end.sm_self-center.sm_flex.flex-col.sm_flex-row.items-center.py-1.pb-4.sm_py-0.sm_pb-0.hidden
-          a.text-teal-200.hover_text-white.text-lg.no-underline.sm_px-4.py-2.sm_pt-2(href='/') Shop
-          a.text-teal-200.hover_text-white.text-lg.no-underline.sm_px-4.py-2.sm_pt-2(href='/admin/add-product') Add Product
-    main.flex.justify-center
-      .w-full.max-w-xs.mt-8
-        form.bg-white.text-center.shadow-md.rounded.px-8.pt-6.pb-8.mb-4(action='/admin/add-product' method='post')
-          .mb-4
-            label.block.text-gray-700.text-3xl.font-semibold.mb-2(for='title').
-              
-              Product Title
-              
-            input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-gray-700.leading-tight.focus_outline-none.focus_shadow-outline#title(type='text' name='title' placeholder='Product Title')
-          .flex.items-center.justify-between
-            button.bg-blue-500.hover_bg-blue-700.text-white.font-bold.py-2.px-4.rounded.focus_outline-none.focus_shadow-outline(type='submit').
-              
-              Add Product
-              
-    script.
-      
-      function navToggle() {
-              var btn = document.getElementById('menuBtn');
-              var nav = document.getElementById('menu');
-      
-              btn.classList.toggle('open');
-              nav.classList.toggle('flex');
-              nav.classList.toggle('hidden');
-            }
-      
+extends layouts/main-layout.pug
+
+block title
+  title Add Product
+  
+block content
+  main.flex.justify-center
+    .w-full.max-w-xs.mt-8
+      form.bg-white.text-center.shadow-md.rounded.px-8.pt-6.pb-8.mb-4(action='/admin/add-product' method='post')
+        .mb-4
+          label.block.text-gray-700.text-3xl.font-semibold.mb-2(for='title').
+            
+            Product Title
+            
+          input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-gray-700.leading-tight.focus_outline-none.focus_shadow-outline#title(type='text' name='title' placeholder='Product Title')
+        .flex.items-center.justify-between
+          button.bg-blue-500.hover_bg-blue-700.text-white.font-bold.py-2.px-4.rounded.focus_outline-none.focus_shadow-outline(type='submit').
+            
+            Add Product
+  

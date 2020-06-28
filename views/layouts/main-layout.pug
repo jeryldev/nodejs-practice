@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    link(rel='stylesheet' href='/css/customstyle.css')
+    link(rel='stylesheet' href='/css/style.css')
+    block title
+    block styles
+  body.bg-blue-200
+    header#top.w-full.flex.flex-col.sm_relative.bg-white.pin-t.pin-r.pin-l
+      nav#site-menu.flex.flex-col.sm_flex-row.w-full.justify-between.bg-teal-500.items-center.px-4.sm_px-6.bg-white.shadow.sm_shadow-none
+        .w-full.sm_w-auto.self-start.sm_self-center.flex.flex-row.sm_flex-none.flex-no-wrap.justify-between.items-center
+          a.no-underline.py-1(href='#')
+            h1.font-semibold.text-3xl.tracking-tight.text-white.
+              
+              Node.js Practice
+              
+          button#menuBtn.hamburger.block.sm_hidden.focus_outline-none(type='button' onclick='navToggle();')
+            span.hamburger__top-bun
+            span.hamburger__middle-bun
+            span.hamburger__bottom-bun
+        #menu.w-full.sm_w-auto.self-end.sm_self-center.sm_flex.flex-col.sm_flex-row.items-center.py-1.pb-4.sm_py-0.sm_pb-0.hidden
+          a.text-teal-200.hover_text-white.text-lg.no-underline.sm_px-4.py-2.sm_pt-2(href='/') Shop
+          a.text-teal-200.hover_text-white.text-lg.no-underline.sm_px-4.py-2.sm_pt-2(href='/admin/add-product') Add Product
+    block content
+            
+    script.
+      
+      function navToggle() {
+              var btn = document.getElementById('menuBtn');
+              var nav = document.getElementById('menu');
+              btn.classList.toggle('open');
+              nav.classList.toggle('flex');
+              nav.classList.toggle('hidden');
+            }
+      
