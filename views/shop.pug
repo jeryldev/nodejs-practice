@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-html(lang="en")
+doctype html
+html(lang='en')
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="/css/customstyle.css")
-    link(rel="stylesheet", href="/css/style.css")
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    link(rel='stylesheet' href='/css/customstyle.css')
+    link(rel='stylesheet' href='/css/style.css')
     title #{docTitle}
   body.bg-blue-200
     header#top.w-full.flex.flex-col.sm_relative.bg-white.pin-t.pin-r.pin-l
@@ -12,9 +12,9 @@ html(lang="en")
         .w-full.sm_w-auto.self-start.sm_self-center.flex.flex-row.sm_flex-none.flex-no-wrap.justify-between.items-center
           a.no-underline.py-1(href='#')
             h1.font-semibold.text-3xl.tracking-tight.text-white.
-
+              
               Node.js Practice
-
+              
           button#menuBtn.hamburger.block.sm_hidden.focus_outline-none(type='button' onclick='navToggle();')
             span.hamburger__top-bun
             span.hamburger__middle-bun
@@ -27,39 +27,41 @@ html(lang="en")
         .text-center.max-w-lg.mx-auto.mt-6
           if products.length > 0
             h3.text-black.text-lg.font-semibold.mb-8.text-3xl.font-sans.
-              My Products
+              
+              My Products            
           else
-            h3.text-black.text-lg.font-semibold.mb-8.text-3xl.font-sans.
-              No Products
+            .bg-white.text-center.shadow-md.rounded.px-8.pt-6.pb-8.mb-4
+              h3.block.text-gray-700.text-3xl.font-semibold.
+                
+                No Products
+          
         .grid.grid-cols-6.gap-4.items-start.mt-8.mx-auto.px-8
           each product in products
             .col-span-6.sm_col-span-6.md_col-span-3.lg_col-span-2.xl_col-span-2
               .bg-white.shadow-lg.rounded-lg.px-4.py-6.mx-4.my-4
                 .px-4.py-2
                   h1.text-gray-900.font-bold.text-3xl.uppercase.
-
+                    
                     #{product.title}
-
+                    
                   p.text-gray-600.text-sm.mt-1.
-
+                    
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus
-
+                    
                 img.h-56.w-full.object-cover.mt-2(src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80' alt='NIKE AIR')
                 .flex.items-center.justify-between.px-4.py-2.bg-gray-900
                   h1.text-gray-200.font-bold.text-xl $129
                   button.px-3.py-1.bg-gray-200.text-sm.text-gray-900.font-semibold.rounded.
-
+                    
                     Add to cart
-
-
-
-
-script.
-
-  function navToggle() {
-    var btn = document.getElementById('menuBtn');
-    var nav = document.getElementById('menu');
-    btn.classList.toggle('open');
-    nav.classList.toggle('flex');
-    nav.classList.toggle('hidden');
-      }
+                  
+    script.
+      
+      function navToggle() {
+              var btn = document.getElementById('menuBtn');
+              var nav = document.getElementById('menu');
+              btn.classList.toggle('open');
+              nav.classList.toggle('flex');
+              nav.classList.toggle('hidden');
+            }
+      
