@@ -10,6 +10,9 @@ const products = [];
 
 router.get('/add-product', (req, res, next) => {
   // res.status(200).sendFile(path.join(rootDir, 'views', 'add-product.html'));
+  res.locals.metaTags = {
+    title: 'Add Product',
+  };
   res.render('add-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
