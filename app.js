@@ -6,7 +6,14 @@ const expressHandlebars = require('express-handlebars');
 
 const app = express();
 
-app.engine('handlebars', expressHandlebars());
+app.engine(
+  'handlebars',
+  expressHandlebars({
+    layoutsDir: 'views/layouts/',
+    defaultLayout: 'main-layout',
+    extname: 'handlebars',
+  })
+);
 
 app.set('view engine', 'handlebars');
 // app.set('view engine', 'pug');
@@ -21,23 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/admin', adminData.routes);
 app.use(shopRoutes);
 
-const hbs = expressHandlebars.create();
-
-hbs.handlebars.registerHelper('isActive', (path, currentPath) => {
-  return path === currentPath;
-});
-
-hbs.handlebars.registerHelper('isProductsEmpty', (products) => {
-  return products.length > 0;
-});
 app.use((req, res, next) => {
-  // res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
-
-  res.locals.metaTags = {
-    title: 'Page not found',
-    // description: 'Handlebars description demo for your page',
-    // keywords: 'Keywords for this page',
-  };
   res.status(404).render('404', { pageTitle: 'Page Not Found' });
 });
 

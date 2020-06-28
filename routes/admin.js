@@ -17,6 +17,7 @@ router.get('/add-product', (req, res, next) => {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
     active: path === '/admin/add-product',
+    activeAddProduct: true,
   });
 });
 
