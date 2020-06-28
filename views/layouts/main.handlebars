@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/customstyle.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>{{metaTags.title}}</title>
+    <title>{{pageTitle}}</title>
   </head>
   <body class="bg-blue-200">
     <header
@@ -19,7 +19,7 @@
         <div
           class="w-full sm_w-auto self-start sm_self-center flex flex-row sm_flex-none flex-no-wrap justify-between items-center"
         >
-          <a href="#" class="no-underline py-1">
+          <a href="/" class="no-underline py-1">
             <h1 class="font-semibold text-3xl tracking-tight text-white">
               Node.js Practice
             </h1>
@@ -40,13 +40,14 @@
           class="w-full sm_w-auto self-end sm_self-center sm_flex flex-col sm_flex-row items-center py-1 pb-4 sm_py-0 sm_pb-0 hidden"
         >
           <a
-            class="text-teal-200 hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2"
+            class="hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2 {{#if (isActive path '/')}} text-white {{else}} text-teal-200 {{/if}}"
             href="/"
             >Shop</a
           >
           <a
-            class="text-teal-200 hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2"
+            class="hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2 {{#if (isActive path '/admin/add-product')}} text-white {{else}} text-teal-200 {{/if}}"
             href="/admin/add-product"
+            
             >Add Product</a
           >
         </div>
@@ -61,6 +62,7 @@
         nav.classList.toggle('flex');
         nav.classList.toggle('hidden');
       }
+      
     </script>
   </body>
 </html>
