@@ -27,6 +27,9 @@ hbs.handlebars.registerHelper('isActive', (path, currentPath) => {
   return path === currentPath;
 });
 
+hbs.handlebars.registerHelper('isProductsEmpty', (products) => {
+  return products.length > 0;
+});
 app.use((req, res, next) => {
   // res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 
