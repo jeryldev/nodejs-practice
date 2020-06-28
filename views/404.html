@@ -3,30 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/customstyle.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/customstyle.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Page Not Found</title>
   </head>
   <body class="bg-blue-200">
     <header
       id="top"
-      class="w-full flex flex-col sm:relative bg-white pin-t pin-r pin-l"
+      class="w-full flex flex-col sm_relative bg-white pin-t pin-r pin-l"
     >
       <nav
         id="site-menu"
-        class="flex flex-col sm:flex-row w-full justify-between bg-teal-500 items-center px-4 sm:px-6 bg-white shadow sm:shadow-none"
+        class="flex flex-col sm_flex-row w-full justify-between bg-teal-500 items-center px-4 sm_px-6 bg-white shadow sm_shadow-none"
       >
         <div
-          class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center"
+          class="w-full sm_w-auto self-start sm_self-center flex flex-row sm_flex-none flex-no-wrap justify-between items-center"
         >
           <a href="#" class="no-underline py-1">
-            <h1 class="font-semibold text-xl tracking-tight text-white">
+            <h1 class="font-semibold text-3xl tracking-tight text-white">
               Node.js Practice
             </h1>
           </a>
           <button
             id="menuBtn"
-            class="hamburger block sm:hidden focus:outline-none"
+            class="hamburger block sm_hidden focus_outline-none"
             type="button"
             onclick="navToggle();"
           >
@@ -37,15 +37,15 @@
         </div>
         <div
           id="menu"
-          class="w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden"
+          class="w-full sm_w-auto self-end sm_self-center sm_flex flex-col sm_flex-row items-center py-1 pb-4 sm_py-0 sm_pb-0 hidden"
         >
           <a
-            class="text-teal-200 hover:text-white text-lg no-underline sm:px-4 py-2 sm:pt-2"
+            class="text-teal-200 hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2"
             href="/"
             >Shop</a
           >
           <a
-            class="text-teal-200 hover:text-white text-lg no-underline sm:px-4 py-2 sm:pt-2"
+            class="text-teal-200 hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2"
             href="/admin/add-product"
             >Add Product</a
           >
@@ -53,17 +53,11 @@
       </nav>
     </header>
     <main class="flex justify-center">
-      <div class="w-full max-w-xs">
-        <div
-          action="/add-product"
-          method="post"
-          class="bg-white text-center shadow-md rounded px-8 pt-6 pb-8 mb-4"
-        >
-          <div class="text-center px-3 pb-6 pt-2">
-            <h3 class="text-black text-lg font-bold font-sans">
-              Page not found.
-            </h3>
-          </div>
+      <div class="w-full max-w-xs mt-8">
+        <div class="bg-white text-center shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <h3 class="block text-gray-700 text-3xl font-semibold">
+            Page not found
+          </h3>
         </div>
       </div>
     </main>
@@ -71,7 +65,6 @@
       function navToggle() {
         var btn = document.getElementById('menuBtn');
         var nav = document.getElementById('menu');
-
         btn.classList.toggle('open');
         nav.classList.toggle('flex');
         nav.classList.toggle('hidden');
