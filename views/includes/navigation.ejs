@@ -35,9 +35,24 @@
         >Shop</a
       >
       <a
+        class="hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2 <%= path === '/products' ? 'text-white' : 'text-teal-200' %>"
+        href="/products"
+        >Products</a
+      >
+      <a
+        class="hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2 <%= path === '/cart' ? 'text-white' : 'text-teal-200' %>"
+        href="/cart"
+        >Cart</a
+      >
+      <a
         class="hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2 <%= path === '/admin/add-product'? 'text-white' : 'text-teal-200' %>"
         href="/admin/add-product"
         >Add Product</a
+      >
+      <a
+        class="hover_text-white text-lg no-underline sm_px-4 py-2 sm_pt-2 <%= path === '/admin/products'? 'text-white' : 'text-teal-200' %>"
+        href="/admin/products"
+        >Admin Products</a
       >
     </div>
   </nav>
