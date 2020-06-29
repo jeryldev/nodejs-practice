@@ -1,31 +1,16 @@
-// const path = require('path');
-
 const express = require('express');
 
-// const rootDir = require('../utils/path');
+// Products Controller
+const {
+  getAddProductPage,
+  postAddProductPage,
+} = require('../controllers/products');
 
 const router = express.Router();
 
-const products = [];
+router.get('/add-product', getAddProductPage);
 
-router.get('/add-product', (req, res, next) => {
-  // res.status(200).sendFile(path.join(rootDir, 'views', 'add-product.html'));
-  // res.locals.metaTags = {
-  //   title: 'Add Product',
-  // };
-  res.render('add-product', {
-    pageTitle: 'Add Product',
-    path: '/admin/add-product',
-    // activeAddProduct: true,
-  });
-});
+router.post('/add-product', postAddProductPage);
 
-router.post('/add-product', (req, res, next) => {
-  products.push({ title: req.body.title });
-  // console.log('products::', products);
-  res.redirect('/');
-});
-
-// module.exports = router;
-exports.routes = router;
-exports.products = products;
+// exports.routes = router;
+module.exports = router;
