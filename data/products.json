@@ -1,1 +1,1 @@
-[{"title":"apple"},{"title":"banana"},{"title":"orange"},{"title":"Strawberry"},{"title":"Mango"}]
+[{"title":"Apple","price":"100","imageUrl":"https://th.bing.com/th/id/OIP.0uLmK8Ir6tQ8jiCurAKVkwHaIz?pid=Api&rs=1","description":"This is an apple! This tastes good!"},{"title":"banana","price":"10.99","imageUrl":"https://th.bing.com/th/id/OIP.J713t6KgpMa6j5dXb9AiXQHaHa?pid=Api&rs=1","description":"This is a banana! This is delicious!"}]

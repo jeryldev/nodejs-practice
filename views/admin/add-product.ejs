@@ -4,15 +4,15 @@
   <body class="bg-blue-200">
     <%- include('../includes/navigation.ejs') %>
     <main class="flex justify-center">
-      <div class="w-full max-w-xs">
+      <div class="w-full max-w-lg">
         <form
           action="/admin/add-product"
           method="post"
-          class="bg-white text-center shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div class="mb-4">
             <label
-              class="block text-gray-700 text-3xl font-semibold mb-2"
+              class="block text-gray-700 text-lg font-semibold mb-2"
               for="title"
             >
               Product Title
@@ -25,9 +25,57 @@
               placeholder="Product Title"
             />
           </div>
-          <div class="flex items-center justify-between">
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-lg font-semibold mb-2"
+              for="price"
+            >
+              Price
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus_outline-none focus_shadow-outline"
+              id="price"
+              type="number"
+              name="price"
+              placeholder="Price"
+              step="0.01"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-lg font-semibold mb-2"
+              for="imageUrl"
+            >
+              Image URL
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus_outline-none focus_shadow-outline"
+              id="imageUrl"
+              type="url"
+              name="imageUrl"
+              placeholder="Image URL"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-lg font-semibold mb-2"
+              for="description"
+            >
+              Product Description
+            </label>
+            <textarea
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus_outline-none focus_shadow-outline"
+              id="description"
+              type="text"
+              name="description"
+              rows="5"
+              placeholder="Product Description"
+            ></textarea>
+          </div>
+          <div class="flex items-center">
             <button
-              class="bg-blue-500 hover_bg-blue-700 text-white font-bold py-2 px-4 rounded focus_outline-none focus_shadow-outline"
+              class="mt-4 bg-blue-500 hover_bg-blue-700 text-white font-bold py-2 px-4 rounded focus_outline-none focus_shadow-outline"
               type="submit"
             >
               Add Product
