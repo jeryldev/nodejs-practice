@@ -1,1 +1,20 @@
-[{"title":"Apple","price":"100","imageUrl":"https://th.bing.com/th/id/OIP.0uLmK8Ir6tQ8jiCurAKVkwHaIz?pid=Api&rs=1","description":"This is an apple! This tastes good!"},{"title":"banana","price":"10.99","imageUrl":"https://th.bing.com/th/id/OIP.J713t6KgpMa6j5dXb9AiXQHaHa?pid=Api&rs=1","description":"This is a banana! This is delicious!"}]
+[
+  {
+    "title": "Apple",
+    "price": "100",
+    "imageUrl": "https://th.bing.com/th/id/OIP.0uLmK8Ir6tQ8jiCurAKVkwHaIz?pid=Api&rs=1",
+    "description": "This is an apple! This tastes good!"
+  },
+  {
+    "title": "banana",
+    "price": "10.99",
+    "imageUrl": "https://th.bing.com/th/id/OIP.J713t6KgpMa6j5dXb9AiXQHaHa?pid=Api&rs=1",
+    "description": "This is a banana! This is delicious!"
+  },
+  {
+    "title": "orange",
+    "price": "59.99",
+    "imageUrl": "https://www.ucdavis.edu/sites/default/files/images/article/orange-large.jpg",
+    "description": "This is a nutritious Orange for you!"
+  }
+]
