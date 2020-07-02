@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-const { getProduct } = require('../controllers/shop');
 
 const p = path.join(
   path.dirname(process.mainModule.filename),
@@ -47,6 +46,10 @@ module.exports = class Product {
   static findById(id, callback) {
     getProductsFromFile((products) => {
       const product = products.find((p) => p.id === id);
+      console.log('products::', products);
+      console.log('id::', id);
+      console.log('pid::', id);
+      console.log('product::', product);
       callback(product);
     });
   }
