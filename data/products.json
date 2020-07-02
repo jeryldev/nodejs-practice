@@ -1,20 +1,30 @@
 [
   {
-    "title": "Apple",
-    "price": "100",
+    "title": "apple",
+    "price": "59.99",
     "imageUrl": "https://th.bing.com/th/id/OIP.0uLmK8Ir6tQ8jiCurAKVkwHaIz?pid=Api&rs=1",
-    "description": "This is an apple! This tastes good!"
+    "description": "This is a delicious apple!",
+    "id": "e28403f4-e938-48af-ab70-93fefed96739"
   },
   {
     "title": "banana",
-    "price": "10.99",
+    "price": "25.99",
     "imageUrl": "https://th.bing.com/th/id/OIP.J713t6KgpMa6j5dXb9AiXQHaHa?pid=Api&rs=1",
-    "description": "This is a banana! This is delicious!"
+    "description": "",
+    "id": "85911f5d-edaa-4f9d-a73f-3824d500efdb"
   },
   {
-    "title": "orange",
-    "price": "59.99",
+    "title": "Orange",
+    "price": "10.99",
     "imageUrl": "https://www.ucdavis.edu/sites/default/files/images/article/orange-large.jpg",
-    "description": "This is a nutritious Orange for you!"
+    "description": "",
+    "id": "a9d7fc3d-b17d-431e-a3d8-78093429df29"
+  },
+  {
+    "title": "Orange",
+    "price": "10.99",
+    "imageUrl": "https://www.ucdavis.edu/sites/default/files/images/article/orange-large.jpg",
+    "description": "",
+    "id": "92bb31df-7402-4258-a768-ae2a68f0e1cf"
   }
 ]
